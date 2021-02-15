@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BookListMVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookListMVC.Controllers
 {
@@ -31,7 +32,7 @@ namespace BookListMVC.Controllers
                 return View(Book);
             }
             //update
-            Book = _db.Book.FirstOrDefault(u => u.Id == id);
+            Book = _db.Books.FirstOrDefault(u => u.Id == id);
             if (Book == null)
             {
                 return NotFound();

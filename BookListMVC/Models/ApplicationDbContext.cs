@@ -14,7 +14,6 @@ namespace BookListMVC.Models
 
         }
 
-        public DbSet<Book> books { get; set; }
-        public object Book { get; internal set; }
+        public DbSet<Book> Books { get; set; }
     }
 }
