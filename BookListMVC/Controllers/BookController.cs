@@ -31,7 +31,7 @@ namespace BookListMVC.Controllers
                 return View(Book);
             }
             //update
-            Book = _db.Books.FirstOrDefault(u => u.Id == id);
+            Book = _db.Book.FirstOrDefault(u => u.Id == id);
             if (Book == null)
             {
                 return NotFound();
